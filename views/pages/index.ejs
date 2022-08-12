@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<%- include('../partials/head'); %>
+    <body>
+        <%- include('../partials/header'); %>
+        <main>
+            
+                <div class="jumbotron jumbotron-fluid expand">
+                <div class="container">
+                    <h1 class="display-6 titleFixed">Node with EJS</h1>
+                    <p>Let's learn to work with EJS files</p>
+                </div>
+            </div>
+
+            <div class="container  expand" style="margin-top: 3rem;">
+                <h1 class="display-6 titleFixed"> What is the EJS engine?</h1>
+            
+                <p>It's called Embedded JavaScript templates (EJS) and it's a simple templating 
+                    language that lets you generate HTML markup with simple JavaScript. 
+                    As main features, we highlight:
+                </p>    
+                
+                <ul>                    
+                    <% qualitys.forEach((quality) => { %>
+                        <li>
+                            <strong><%= quality.title %> </strong> <%= quality.message %>  
+                        </li> 
+                    <% }) %>
+                   
+                </ul> 
+            </div>
+ 
+        </main>
+        <%- include('../partials/footer'); %>
+    </body>
+</html>
